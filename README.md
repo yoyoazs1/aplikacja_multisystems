@@ -1,14 +1,16 @@
-# Aplikacja Multisystems
+# Multisystems Centrum v6.8 — Android
 
-Projekt Flutter z automatycznym budowaniem Android APK przez GitHub Actions.
+Projekt opakowuje aktualną wersję `MULTISYSTEMS_Centrum_v6_8.html` jako aplikację Android.
 
-## Jak uruchomić build
-1. Wgraj CAŁĄ zawartość tego folderu do głównego katalogu repozytorium `aplikacja_multisystems`.
-2. Zrób commit do gałęzi `main`.
-3. Otwórz zakładkę **Actions** w GitHub.
-4. Workflow **Build Android APK** uruchomi się automatycznie.
-5. Po zakończeniu otwórz wykonany workflow i pobierz artefakt **Multisystems-APK**. W środku będzie `app-release.apk`.
+## Automatyczny APK na GitHub
+Po wrzuceniu całej zawartości projektu do gałęzi `main` workflow **Build Multisystems APK**
+uruchomi się automatycznie. Gotowy plik będzie w:
+**Actions → Build Multisystems APK → Artifacts → Multisystems-v6.8-APK**.
 
-Workflow można też uruchomić ręcznie przez **Actions > Build Android APK > Run workflow**.
+## Dane
+HTML działa wewnątrz Android WebView. Dane localStorage/IndexedDB pozostają lokalnie w pamięci aplikacji.
 
-Uwaga: obecna aplikacja to baza projektu. Następnym krokiem może być przeniesienie funkcji istniejącej aplikacji Multisystems (klienci, urządzenia, serwisy, SMS, backup itd.) do Fluttera.
+## OneDrive / Google Drive
+Wersja v6.8 zawiera ekran/ustawienia przygotowujące integrację OAuth, ale pełna synchronizacja
+wymaga osobnych danych OAuth (Client ID / konfiguracja aplikacji) dla Google i Microsoft.
+Nie należy wpisywać sekretów OAuth bezpośrednio do repozytorium ani APK.
